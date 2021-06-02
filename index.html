@@ -40,7 +40,7 @@
 			        <div class="col-md-4">
 				
 			        </div><!------col-4 end---->
-			        <div class="cl-md-4">
+			        <div class="col-md-4" id="first">
 				        <h1>Password Reset</h1>
 				        <form class="font-weight-bold" onsubmit="return validation()">
 					        <div class="form-group">
@@ -57,7 +57,12 @@
 						        <input type="submit" name="" class="form-control btn btn-dark text-white" value="RESET PASSWORD">
 					        </div>
 				        </form>  
-				    </div><!---col-4 end--->    
+				    </div><!---col-4 end--->  
+				    <div class="col-md-4 font-weight-bold" id="result">
+				        <h1>Password Changed</h1><br>
+				        <p>Your password has been updated! Now get back in the driver seat, racers are waiting for you!</p><br>
+				        <button class="btn btn-dark text-white w-100">JOIN A RACE</button>
+				    </div><!---col-4 end--->  
 				    <div class="col-md-4">
 				
 			        </div><!------col-4 end---->
@@ -106,6 +111,7 @@
             if(a.length < 8){
             	document.getElementById('password').innerHTML ="Password should have atleast 8 characters";
                 $("#pass").css("border", "2px solid red");
+             
             	return false;
             }
             if(a != b){
@@ -118,7 +124,12 @@
             	$("#pass").css("border", "2px solid red");
             	return false;
             }
-
-            
-    	}
+            else{         	
+                $("#first").css("display", "none");
+                $("#result").css("display", "block");
+                return false;
+                
+            }
+        
+        }
     </script>
