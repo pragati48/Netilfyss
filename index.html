@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body class="bg-color">
+	<!----------navbar start---------->
+	<section>
+		<nav class="navbar navbar-expand-md bg-info">
+			<div class="container">
+			    <a href="" class="navbar-brand">
+				    <img src="image/logo.png" class="web-logo" width="68%">
+			    </a>
+			    <button class="navbar-toggler navbar-toggler-right navbar-light" type="button" data-toggle="collapse" data-target="#a">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+			    <div class="collapse navbar-collapse" id="a">
+			        <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="" class="nav-link text-dark font-weight-bold nav2">Join a Race</a></li>
+                        <li class="nav-item"><a href="" class="nav-link text-dark font-weight-bold nav2">Leaderboard</a></li>
+                        <li class="nav-item"><a href="" class="nav-link text-dark font-weight-bold btn bg-white login">Login</a></li>
+			        </ul> 
+			    </div>       	
+			</div><!-------container end-------->   
+		</nav>
+	</section>
+	<!----------navbar end------------>
+	<!-----------content start------->
+	<section>
+		<div class="container-fluid bg-color back">
+			<div class="container">
+			    <div class="row">
+			        <div class="col-md-4">
+				
+			        </div><!------col-4 end---->
+			        <div class="cl-md-4">
+				        <h1>Password Reset</h1>
+				        <form class="font-weight-bold" onsubmit="return validation()">
+					        <div class="form-group">
+						        <label>NEW PASSWORD</label>
+						        <input type="password" name="" class="form-control" id="pass">
+						        <span id="password" class="text-danger"></span>
+					        </div>
+					        <div class="form-group">
+						        <label>RE-ENTER NEW PASSWORD</label>
+						        <input type="password" name="" class="form-control" id="newpass">
+						        <span id="newpassword" class="text-danger"></span>
+					        </div>
+					        <div class="form-group">
+						        <input type="submit" name="" class="form-control btn btn-dark text-white" value="RESET PASSWORD">
+					        </div>
+				        </form>  
+				    </div><!---col-4 end--->    
+				    <div class="col-md-4">
+				
+			        </div><!------col-4 end---->
+			    </div><!-----row end-------->
+            </div><!-----container end--->
+			<!-- <div class="row back">
+				
+			</div> -->
+		</div><!-------container-fluid end---------->
+		
+		</div><!-------container-fluid end---------->
+	</section>
+	<!------------content end----------->
+	<!----------footer start------------->
+	<section>
+		<div class="footer container-fluid bg-info">
+			<div class="row">
+                <div class="col-md-2">
+                	
+                </div><!---col-2 end--->
+				<div class="col-md-8">
+			        <ul class="navbar-nav navbar navbar-expand-md">
+				        <li class="nav-item margin"><a href="" class="nav-link text-white font-weight-bold">About Us</a></li>
+				        <li class="nav-item margin"><a href="" class="nav-link text-white font-weight-bold">Privacy Policy</a></li>
+				        <li class="nav-item margin"><a href="" class="nav-link text-white font-weight-bold">Tutorials</a></li>
+				        <li class="nav-item margin"><a href="" class="nav-link text-white font-weight-bold">Term of Services</a></li>
+			        </ul>
+			    </div><!---col-8 end---->
+			    <div class="col-md-2">
+			    	
+			    </div><!---col-2 end--->    
+		    </div><!----row end--->
+        </div>
+	</section>
+	<!--------------footer end----------->
+    
+</body>
+</html>
+
+
+ <script>
+    	function validation(){
+            var a = document.getElementById('pass').value;
+            var b = document.getElementById('newpass').value;
+            var alphabet = /^[A-Za-z]+$/;
+            if(a.length < 8){
+            	document.getElementById('password').innerHTML ="Password should have atleast 8 characters";
+                $("#pass").css("border", "2px solid red");
+            	return false;
+            }
+            if(a != b){
+            	document.getElementById('newpassword').innerHTML = "Password do not match";
+            	$("#newpass").css("border", "2px solid red");
+            	return false;
+            }
+            if(a.match(alphabet)){
+            	document.getElementById('password').innerHTML ="Password should not have only alphabets";
+            	$("#pass").css("border", "2px solid red");
+            	return false;
+            }
+
+            
+    	}
+    </script>
